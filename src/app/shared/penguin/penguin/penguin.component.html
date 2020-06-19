@@ -1,1 +1,10 @@
-<p>penguin works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <app-penguin-list (penguinSelected)="onPenguinSelected($event)"></app-penguin-list>
+    </div>
+    <div class="col-md-8 content">
+      <app-penguin-details [selectedPenguin]="selectedPenguin"></app-penguin-details>
+    </div>
+  </div>
+</div>

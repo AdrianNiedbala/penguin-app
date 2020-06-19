@@ -1,0 +1,41 @@
+.header {
+  color: #fff;
+  background-color: #3f51b5;
+  border-color: 3f51b5;
+  height: 50px;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.penguin-details {
+  padding: 20px;
+  border: 1px solid rgba(0,0,0,0.125);
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+div {
+  padding: 10px 0px;
+}
+
+.female-theme {
+  background-color: #f673ed;
+}
+
+.male-theme {
+  background-color: #3f51b5;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  width: 100%;
+}
+
+.gender-image {
+  margin-left: 25%;
+}

@@ -1,0 +1,21 @@
+<div *ngIf="selectedPenguin; then penguin; else noItems"></div>
+<ng-template #penguin>
+<div class="header" [ngClass]="selectedPenguin.gender == 'F' ? 'female-theme' : 'male-theme'">
+  Selected penguin
+</div>
+<div class="penguin-details">
+  <div>Name: {{ selectedPenguin.name }}</div>
+  <div>Age: {{ selectedPenguin.age }}</div>
+  <div>Genus: {{ selectedPenguin.genus }}</div>
+  <div>Gender: {{ selectedPenguin.gender }}</div>
+  <div>
+    <img class="gender-image" [src]="selectedPenguin.gender == 'F' ? 'assets/images/penguin_f.jpg' : 'assets/images/penguin_m.jpg'">
+  </div>
+</div>
+</ng-template>
+<ng-template #noItems>
+  <h4 class="no-item-selected">
+    No penguin seleceted
+  </h4>
+  <img src="assets/images/no_penguin.jpg" alt="No penguin">
+</ng-template>

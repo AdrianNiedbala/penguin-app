@@ -1,0 +1,22 @@
+.row {
+  height: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row div {
+  padding: 20px;
+}
+
+.container {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
+  margin-left: 0;
+  height: 95%;
+  max-width: 100%;
+}
+
+.content {
+  border-left: solid 1px #b6b6b6;
+}
