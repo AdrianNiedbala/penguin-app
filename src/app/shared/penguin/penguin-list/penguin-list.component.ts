@@ -1,5 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { PenguinModel } from '../models/penguin.class';
+import { PenguinService } from '../services/penguin.service';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -9,11 +11,7 @@ import { PenguinModel } from '../models/penguin.class';
 })
 export class PenguinListComponent implements OnInit {
 
-  penguins: PenguinModel[] = [
-    {name: 'Rex', gender: 'M', age: 2, genus: 'African'},
-    {name: 'Bobo', gender: 'M', age: 5, genus: 'King'},
-    {name: 'Lea', gender: 'F', age: 2, genus: 'Gentoo'}
-  ];
+  penguins$: Observable<PenguinModel[]>;
 
   @Output() penguinSelected = new EventEmitter<PenguinModel>();
 
@@ -21,9 +19,10 @@ export class PenguinListComponent implements OnInit {
     this.penguinSelected.emit(penguin);
   }
 
-  constructor() { }
+  constructor(private penguinService: PenguinService) { }
 
   ngOnInit(): void {
+    this.penguins$ = this.penguinService.getAll();
   }
 
 }

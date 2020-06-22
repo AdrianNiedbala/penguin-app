@@ -2,7 +2,7 @@
   <span class="list-group-item list-group-item-action active">
     All penguins
   </span>
-  <span *ngFor="let penguin of penguins">
+  <span *ngFor="let penguin of penguins$ | async">
     <span class="list-group item list-group-item-action" (click)="selectPenguin(penguin)">
       {{ penguin.name}}
     </span>
