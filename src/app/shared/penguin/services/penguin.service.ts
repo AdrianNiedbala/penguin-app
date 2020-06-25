@@ -18,4 +18,12 @@ export class PenguinService {
   getAll(): Observable<PenguinModel[]> {
     return this.httpClient.get<PenguinModel[]>(this.routes.penguin);
   }
+
+  getGenus(): Observable<string[]> {
+    return this.httpClient.get<string[]>(`${this.routes.penguin}/genus`);
+  }
+
+  addPenguin(penguin: PenguinModel) {
+    return this.httpClient.post(this.routes.penguin, penguin);
+  }
 }

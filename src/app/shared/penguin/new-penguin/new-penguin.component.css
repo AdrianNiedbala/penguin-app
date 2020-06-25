@@ -1,0 +1,42 @@
+.header {
+    color: #fff;
+    background-color: #3F51B5;
+    border-color: #3F51B5;
+    height: 50px;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+form {
+  height: 95%;
+  padding: 20px 0px 0px 20px;
+  border: 1px solid rgba(0,0,0,0.125);
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.radio label {
+  padding: 0 15px;
+}
+
+.actions {
+  float: right;
+  padding-right: 10%;
+}
+
+.button {
+  margin-left: 15px;
+  width: 75px;
+}
+
+.container {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  height: 91%;
+  max-width: 100%;
+  margin-right: 0px;
+  margin-left: 0px;
+}
